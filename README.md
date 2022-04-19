@@ -21,6 +21,10 @@ param domain string = 'contoso'
 param env string = 'dev'
 param shortloc string = 'eus'
 
+// Name convention
+var fulldomain = '${domain}${env}${shortloc}'
+var fulldomainh = '${domain}-${env}-${shortloc}'
+
 // App Service and Web App parameters
 param webSiteName string = 'webapp${domain}${env}${shortloc}'
 param sku string = 'F1' // The SKU of App Service Plan
