@@ -3,7 +3,7 @@ param domain string = 'contoso'
 param env string = 'dev'
 param shortloc string = 'eus'
 
-// Name convention
+// Naming convention
 var fulldomain = '${domain}${env}${shortloc}'
 var fulldomainh = '${domain}-${env}-${shortloc}'
 
