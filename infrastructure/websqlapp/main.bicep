@@ -3,14 +3,18 @@ param domain string = 'contoso'
 param env string = 'dev'
 param shortloc string = 'eus'
 
+// Name convention
+var fulldomain = '${domain}${env}${shortloc}'
+var fulldomainh = '${domain}-${env}-${shortloc}'
+
 // App Service and Web App parameters
-param webSiteName string = 'webapp${domain}${env}${shortloc}'
+param webSiteName string = 'webapp${fulldomain}'
 param sku string = 'F1' // The SKU of App Service Plan
 param linuxFxVersion string = 'node|14-lts' // The runtime stack of web app
-var appServicePlanName = 'asp-${domain}-${env}-${shortloc}'
+var appServicePlanName = 'asp-${fulldomainh}'
 
 // PostgreSQL parameters
-param dbname string = 'posql-${domain}-${env}-${shortloc}'
+param dbname string = 'posql-${fulldomainh}'
 @description('Administrator user name')
 @secure()
 param adminUser string
