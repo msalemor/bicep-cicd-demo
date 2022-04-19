@@ -4,7 +4,7 @@
 
 The objective of this repo is to demo and discuss the capabilities and advantages of deploying Azure services using Bicep using Git actions to different environments.
 
-## Main Bicep concept to explore
+## Main Bicep concepts to explore
 
 - Consistency in naming
 - Consistency in deployment
@@ -13,7 +13,7 @@ The objective of this repo is to demo and discuss the capabilities and advantage
 - Resources
 - Dependencies
 
-## Bicep Code
+## Bicep template
 
 ```bicep
 param location string = resourceGroup().location // Location for all resources
@@ -98,7 +98,7 @@ resource pgsql 'Microsoft.DBForPostgreSQL/servers@2017-12-01' = {
 ```
 
 
-## Git Action
+## Git Action template
 
 ```yaml
 on: [workflow_dispatch]
