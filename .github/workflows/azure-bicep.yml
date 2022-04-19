@@ -33,5 +33,12 @@ jobs:
       name: qa      
     runs-on: ubuntu-latest
     steps:
-      - name: Testing
-        run: ls -la
+    
+    - name: deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ''        
+        resourceGroupName: ''
+        template: ./infrastructure/websqlapp/main.bicep
+        parameters: env=qa
+        failOnStdErr: false
