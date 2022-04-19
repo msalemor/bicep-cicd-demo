@@ -23,7 +23,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}        
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./infrastructure/websqlapp/main.bicep
-        parameters: env=dev
+        parameters: env=dev adminUser=${{ secrets.adminUser }} adminPassword=${{ secrets.adminPassword }}
         failOnStdErr: false
         
   staging:
