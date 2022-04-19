@@ -2,7 +2,9 @@ on: [workflow_dispatch]
 
 name: Azure Bicep deployment
 jobs:
-  build-and-deploy:
+  
+  dev:
+    name: Build and deploy to dev
     runs-on: ubuntu-latest
     steps:
 
@@ -23,3 +25,10 @@ jobs:
         template: ./infrastructure/websqlapp/main.bicep
         parameters: env=dev
         failOnStdErr: false
+        
+  staging:
+    needs: dev
+    name: Build and deploy to qa
+    environment:
+      name: qa      
+    runs-on: ubuntu-latest    
