@@ -2,10 +2,12 @@
 
 ## Objective
 
-The objective of this repo is to demo and discuss de capabilities, benefits and advantages of deploying Azure services using Bicep using Git actions to different environments.
+The objective of this repo is to demo and discuss the capabilities and advantages of deploying Azure services using Bicep using Git actions to different environments.
 
 ## Main Bicep concept to explore
 
+- Consistency in naming
+- Consistency in deployment
 - Parameters
 - Variables
 - Resources
