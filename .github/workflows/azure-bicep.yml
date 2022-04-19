@@ -31,4 +31,7 @@ jobs:
     name: Build and deploy to qa
     environment:
       name: qa      
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing
+        run: ls -la
