@@ -13,6 +13,11 @@ The objective of this repo is to demo and discuss the capabilities and advantage
 - Resources
 - Dependencies
 
+## Requiremeents
+
+- Development experience (variables, conditional statements, control statements, etc.)
+- DevOps experience (if you want to create the entire pipeline)
+
 ## Bicep template
 
 ```bicep
