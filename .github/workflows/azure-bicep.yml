@@ -37,8 +37,8 @@ jobs:
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
-        subscriptionId: ''        
-        resourceGroupName: ''
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}        
+        resourceGroupName: ${{ secrets.QA_AZURE_RG }}
         template: ./infrastructure/websqlapp/main.bicep
-        parameters: env=qa
+        parameters: env=qa adminUser=${{ secrets.qaAdminUser }} adminPassword=${{ secrets.qaAdminPassword }}
         failOnStdErr: false
